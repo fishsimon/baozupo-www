@@ -1,0 +1,270 @@
+
+@font-face {
+    src:url(../fonts/iconfont.ttf);
+    font-family: 'iconfont';
+}
+body,ul,li,div,a,img{
+    margin: 0;
+    padding: 0;
+    font-family: 'iconfont', serif;
+    color:#fff;
+}
+.container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+header{
+    height:53px;
+    background: rgb(101,179,77);
+    position: relative;
+}
+header label i:before{
+    content: "\e628";
+}
+header .city{
+    left:5px;
+    height:18px;
+}
+header .logo{
+    position: absolute;
+    top:5px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    width: 50%;
+}
+header .map{
+    height:18px;
+    right:5px;
+}
+.straight-absolute-center{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: auto;
+}
+.perfect-absolute-center{
+    position: absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+main{
+    height:500px;
+    background:#fff;
+}
+i{
+    font-style: normal;
+}
+/*header .title{*/
+    /*height:50%;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+/*}*/
+header .search{
+    width: 65%;
+    height: 75%;
+    background: #fff;
+    text-align: center;
+    line-height: 42px;
+}
+header .search .btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right:3px;
+    text-align: center;
+    line-height: 30px;
+}
+header .search .btn i:before {
+    content: "\e660";
+}
+header .search .btn i{
+    color:gray;
+}
+header .map i:before{
+    content: "\e627";
+}
+header .map i{
+    font-size: 1.2rem;
+}
+header .search span{
+    color:#000;
+}
+.search span i:before{
+    content: "\348d";
+}
+main .menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height:auto;
+    align-items: center;
+}
+main .menu > div{
+    width:16vw;
+    height:16vw;
+    border-radius: 50%;
+    margin:5vw 4.5vw;
+    text-align: center;
+    line-height: 16vw;
+    position: relative;
+}
+main .menu > div span{
+    position: absolute;
+    /*left: -50%;*/
+    bottom: -25px;
+    color:rgb(86,86,86);
+    display:block;
+    line-height: 1;
+    width:100%;
+    text-align: center;
+}
+main .menu > .building i:before{
+    content: "\e639";
+}
+main .menu > .building{
+    background: rgb(252,94,93);
+}
+main .menu > .used i:before{
+    content: "\e60f";
+}
+main .menu > .used{
+    background: rgb(101,179,77);
+}
+main .menu > .tenement i:before{
+    content: "\e87e";
+}
+main .menu > .tenement{
+    background: rgb(254,171,49);
+}
+main .menu > .office-building i:before{
+    content: "\e626";
+}
+main .menu > .office-building{
+    background: rgb(254,102,151);
+}
+main .menu > .office-building span{
+    width: 130%;
+    left:-12px;
+}
+main .menu > .sale i:before{
+    content: "\e853";
+}
+main .menu > .sale{
+    background: rgb(44,161,240);
+}
+main .menu > .global i:before{
+    content: "\e7fb";
+}
+main .menu > .global{
+    background: rgb(254,205,51);
+}
+main .menu > .find i:before{
+    content: "\e615";
+}
+main .menu > .find{
+    background: rgb(214,126,226);
+}
+main .menu > .buliding-rate i:before{
+    content: "\e652";
+}
+main .menu > .buliding-rate{
+    background: rgb(50,209,151);
+}
+main .menu > div i{
+    font-size: 2.2rem;
+}
+main .news{
+    background: rgb(235,255,230);
+    height:20vw;
+    width: 100vw;
+    margin-top: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main .news .title{
+    color:rgb(88,165,0);
+    font-size: 2rem;
+    width:23vw;
+    font-weight: bold;
+    font-style: italic;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+main .news ul li{
+    color:#000;
+    font-size: 1.2rem;
+    line-height: 8vw;
+}
+main .content-menu{
+    width: 100%;
+    height:auto;
+    display: flex;
+}
+main .content-menu .item{
+    width:25%;
+    height:auto;
+    border-right: 1px solid #e5e5e5;
+}
+main .content-menu .item .title{
+    color:#555555;
+    text-align:center;
+    font-family: "Microsoft YaHei UI",serif;
+    font-size: 1.1rem;
+    margin:4vw auto;
+}
+main .content-menu .icon{
+    width:100%;
+    text-align: center;
+    height:auto;
+}
+main .content-menu .icon img{
+    width:80%;
+    height:auto;
+}
+main .recomand{
+    width:100%;
+    height:auto;
+    border-top:4vw solid #e5e5e5;
+}
+main .recomand .title{
+    height:auto;
+    border-bottom: 1px solid #e5e5e5;
+    padding:1vw 0;
+}
+main .recomand .title .inner{
+    color:#555;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-left:1.5vw solid #61ab00;
+    padding-left: 3vw;
+}
+main .recomand .items{
+    width:100%;
+    height:auto;
+}
+main .recomand .items .recomand-item{
+    display: flex;
+}
+.recomand-item .icon{
+    width:30%;
+    position: relative;
+}
+.recomand-item .icon img{
+    width: 100%;
+}
+.recomand-item .content{
+    width:65%;
+}
+.recomand-item .content-title{
+    font-family: "Microsoft YaHei UI",serif;
+    font-size: 1rem;
+    color:#555;
+}
+
+

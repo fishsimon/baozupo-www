@@ -1,0 +1,55 @@
+@font-face {
+    src:url(../fonts/iconfont.ttf);
+    font-family: 'iconfont';
+}
+body,ul,li,div,a,img{
+    margin: 0;
+    padding: 0;
+    font-family: 'iconfont', serif;
+    color:#fff;
+}
+.container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+header{
+    height:100px;
+    background: green;
+}
+header .title label i:before{
+    content:'\e626';
+}
+main{
+    height:500px;
+    background: pink;
+}
+i{
+    font-style: normal;
+}
+header .title{
+    height:50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .search{
+    width: 70%;
+    height: 40%;
+    background: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+header .search .btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right:3px;
+    top:3px;
+}
+header .search .btn i:before {
+    content: "\e660";
+}
+header .search .btn i{
+    color:gray;
+}
