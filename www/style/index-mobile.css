@@ -1,270 +1,588 @@
-
+*{
+    box-sizing:border-box;
+}
 @font-face {
     src:url(../fonts/iconfont.ttf);
     font-family: 'iconfont';
 }
+
+body,html,#app{
+    width:100%;
+    height:100%;
+    color:#000;
+}
 body,ul,li,div,a,img{
-    margin: 0;
-    padding: 0;
-    font-family: 'iconfont', serif;
-    color:#fff;
+    margin:0;
+    padding:0;
+    font-family: "Microsoft YaHei UI", 'iconfont', serif;
+}
+a{
+    text-decoration:none;
+    color:#555;
 }
 .container{
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    width:100%;
+    max-width:800px;
+    margin:0 auto;
 }
 header{
+    width:100%;
     height:53px;
-    background: rgb(101,179,77);
-    position: relative;
-}
-header label i:before{
-    content: "\e628";
-}
-header .city{
-    left:5px;
-    height:18px;
-}
-header .logo{
-    position: absolute;
-    top:5px;
-    left:0;
-    right:0;
-    margin: 0 auto;
-    width: 50%;
-}
-header .map{
-    height:18px;
-    right:5px;
-}
-.straight-absolute-center{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    margin: auto;
-}
-.perfect-absolute-center{
-    position: absolute;
-    margin:auto;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+    min-height:53px;
+    max-height:106px;
+    background:rgb(101,179,77);
+    position:fixed;
+    color:#fff;
+    z-index:1;
 }
 main{
-    height:500px;
+    height:auto;
     background:#fff;
+    color:#fff;
+    padding-top:53px;
+}
+main .menu > div i {
+    font-size:2rem;
+}
+.head-background{
+    width:100%;
+    height:53px;
+    max-height:106px;
 }
 i{
     font-style: normal;
 }
+header label i:before{
+    content:'\e618';
+}
+.horizon-absolute-center{
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.straight-absolute-center{
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+.perfect-absolute-center{
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin:auto;
+}
+header .city{
+    height:18px;
+    left:5px;
+}
+header .map{
+    height: 1.6rem;
+    right: 1rem;
+}
+header .title-row{
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    margin: auto 0;
+}
+header .map i:before{
+    content:'\e627'
+}
+header .map i{
+    font-size:1.2rem;
+}
+header .logo{
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    font-size: 1.8rem;
+}
 /*header .title{*/
     /*height:50%;*/
-    /*display: flex;*/
+    /*display:flex;*/
+    /*flex-direction:row;*/
     /*justify-content: space-between;*/
-    /*align-items: center;*/
+    /*align-items:center;*/
 /*}*/
 header .search{
-    width: 65%;
-    height: 75%;
-    background: #fff;
+    width:67%;
+    height:36px;
+    background:#fff;
+    color:gray;
     text-align: center;
-    line-height: 42px;
+    line-height: 32px;
+    bottom:7px;
+    border-radius: 5px;
 }
 header .search .btn{
-    width: 30px;
-    height: 30px;
-    position: absolute;
+    width:30px;
+    height:30px;
+    position:absolute;
     right:3px;
-    text-align: center;
-    line-height: 30px;
-}
-header .search .btn i:before {
-    content: "\e660";
+    text-align:center;
+    line-height:30px;
 }
 header .search .btn i{
     color:gray;
 }
-header .map i:before{
-    content: "\e627";
+header .search .btn i:before{
+    content:'\e660';
 }
-header .map i{
-    font-size: 1.2rem;
+header .search .search-text i:before{
+    content:'\e634';
 }
-header .search span{
-    color:#000;
+header .search .search-text i{
+    font-size:1.6rem;
 }
-.search span i:before{
-    content: "\348d";
-}
+
 main .menu{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height:auto;
+    height: auto;
     align-items: center;
 }
-main .menu > div{
-    width:16vw;
-    height:16vw;
+
+main .menu > .item{
+    width:25%;
+}
+main .menu > .item > div{
+    width: 12vw;
+    height: 12vw;
     border-radius: 50%;
-    margin:5vw 4.5vw;
+    margin:5vw auto;
     text-align: center;
-    line-height: 16vw;
+    line-height: 12vw;
     position: relative;
 }
-main .menu > div span{
-    position: absolute;
-    /*left: -50%;*/
-    bottom: -25px;
-    color:rgb(86,86,86);
-    display:block;
-    line-height: 1;
-    width:100%;
+main .menu > .item > div.menu-text{
+    color: rgb(86,86,86);
+    width: 100%;
     text-align: center;
+    margin:-3vw auto 0 auto;
+    line-height: 1;
+    height: 15px;
 }
-main .menu > .building i:before{
-    content: "\e639";
+/*main .menu > .item i{*/
+    /*font-size:1.8rem;*/
+/*}*/
+main .menu .building{
+    background-color:rgb(252,94,93);
 }
-main .menu > .building{
-    background: rgb(252,94,93);
+main .menu .building i:before{
+    content:'\e612';
 }
-main .menu > .used i:before{
-    content: "\e60f";
+main .menu .used{
+    background-color:rgb(101,179,77);
 }
-main .menu > .used{
-    background: rgb(101,179,77);
+main .menu .used i:before{
+    content:'\e79d';
 }
-main .menu > .tenement i:before{
-    content: "\e87e";
+main .menu .tenement{
+    background-color: rgb(254,171,49);
 }
-main .menu > .tenement{
-    background: rgb(254,171,49);
+main .menu .tenement i:before{
+    content:'\e87e';
 }
-main .menu > .office-building i:before{
-    content: "\e626";
+main .menu .office-building{
+    background-color: rgb(254,102,151);
 }
-main .menu > .office-building{
-    background: rgb(254,102,151);
+main .menu .office-building i:before{
+    content:'\e64b';
 }
-main .menu > .office-building span{
-    width: 130%;
-    left:-12px;
+main .menu .sale{
+    background-color: rgb(44,161,240);
 }
-main .menu > .sale i:before{
-    content: "\e853";
+main .menu .sale i:before{
+    content:'\e70d';
 }
-main .menu > .sale{
-    background: rgb(44,161,240);
+main .menu .global{
+    background-color: rgb(254,205,51);
 }
-main .menu > .global i:before{
-    content: "\e7fb";
+main .menu .global i:before{
+    content:'\e6fe';
 }
-main .menu > .global{
-    background: rgb(254,205,51);
+main .menu .find{
+    background-color: rgb(214,126,226);
 }
-main .menu > .find i:before{
-    content: "\e615";
+main .menu .find i:before{
+    content:'\e60a';
 }
-main .menu > .find{
-    background: rgb(214,126,226);
+main .menu .building-rate{
+    background-color: rgb(50,209,151);
 }
-main .menu > .buliding-rate i:before{
-    content: "\e652";
+main .menu .building-rate i:before{
+    content:'\e603';
 }
-main .menu > .buliding-rate{
-    background: rgb(50,209,151);
-}
-main .menu > div i{
-    font-size: 2.2rem;
-}
+
 main .news{
-    background: rgb(235,255,230);
+    width:100vw;
     height:20vw;
-    width: 100vw;
-    margin-top: 6vw;
+    background:rgb(235,255,230);
+    margin-top:6vw;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-around;
 }
+
 main .news .title{
-    color:rgb(88,165,0);
-    font-size: 2rem;
-    width:23vw;
+    background-size:cover;
+    background-clip:content-box;
+    height:72%;
+    max-height: 74px;
+    width: 24%;
+    max-width:103px;
+    min-width:74px;
     font-weight: bold;
-    font-style: italic;
     border-right: 1px solid rgba(0,0,0,0.1);
+    padding: 0 4%;
+}
+main .news .title img{
+    width:100%;
+    height:100%;
 }
 main .news ul li{
-    color:#000;
-    font-size: 1.2rem;
+    color:rgb(0,0,0);
     line-height: 8vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+    padding-left: 6%;
+}
+main .news ul li span{
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 main .content-menu{
-    width: 100%;
+    width:100%;
     height:auto;
-    display: flex;
+    display:flex;
 }
 main .content-menu .item{
     width:25%;
     height:auto;
-    border-right: 1px solid #e5e5e5;
+    border-right:1px solid #E5E5E5;
 }
 main .content-menu .item .title{
     color:#555555;
     text-align:center;
-    font-family: "Microsoft YaHei UI",serif;
-    font-size: 1.1rem;
+    font-size:0.9rem;
     margin:4vw auto;
 }
 main .content-menu .icon{
     width:100%;
-    text-align: center;
     height:auto;
+    text-align:center;
 }
 main .content-menu .icon img{
     width:80%;
     height:auto;
 }
-main .recomand{
+main .recommend{
     width:100%;
     height:auto;
-    border-top:4vw solid #e5e5e5;
+    border-top:5vw solid #e5e5e5;
 }
-main .recomand .title{
+main .recommend .title{
     height:auto;
-    border-bottom: 1px solid #e5e5e5;
-    padding:1vw 0;
+    border-bottom:1px solid #e5e5e5;
+    padding:2vw 0;
 }
-main .recomand .title .inner{
+main .recommend .inner{
+    border-left:2vw #61AB00 solid;
     color:#555;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-left:1.5vw solid #61ab00;
-    padding-left: 3vw;
+    padding-left:3vw;
 }
-main .recomand .items{
+
+main .recommend .items {
     width:100%;
     height:auto;
+    padding-bottom:20vw;
 }
-main .recomand .items .recomand-item{
-    display: flex;
+.recommend-item{
+    display:flex;
+    justify-content: space-around;
+    border-bottom:1px solid #e5e5e5;
+    height:35vw;
+    align-items: center;
 }
-.recomand-item .icon{
-    width:30%;
+.recommend-item:last-child{
+    border:none;
+}
+.recommend-item .icon{
+    width: 28%;
     position: relative;
+    height: 75%;
 }
-.recomand-item .icon img{
-    width: 100%;
+.recommend-item .icon img{
+    width:100%;
+    height:100%;
 }
-.recomand-item .content{
-    width:65%;
+.recommend-item .icon div{
+    background-color:rgba(0,0,0,0.4);
+    color:#fff;
+    position:absolute;
+    right:0;
+    bottom:0;
+    padding:3px;
 }
-.recomand-item .content-title{
+
+.recommend-item .content{
+    width: 63%;
+    color: #555555;
+}
+.recommend-item .content .location{
+    display:flex;
+    justify-content: space-between;
+    padding-right: 6px;
+    position:relative;
+}
+.recommend-item .recommend-item-title{
     font-family: "Microsoft YaHei UI",serif;
-    font-size: 1rem;
-    color:#555;
+    font-size:1rem;
+    color:#000;
+}
+.recommend-item .specifies{
+    display:flex;
+}
+.recommend-item .remark{
+    color:#D24D0C;
+}
+.recommend-item .specifies .item{
+    width: auto;
+    height: auto;
+    border: 1px solid #E7E7E7;
+    display: inline-block;
+    margin:0 0.3vw;
+    padding: 0.5vw;
+    font-size: 0.7rem;
+    border-radius:5%;
+}
+.recommend-item .content{
+    display:flex;
+    flex-direction:column;
+    height:75%;
+    justify-content: space-around;
+    color:#89898B;
 }
 
+footer{
+    display:flex;
+    visibility:hidden;
+    height:15vw;
+    max-height: 65px;
+    justify-content: space-around;
+    position:fixed !important;
+    bottom:0;
+    width:100%;
+    align-items:center;
+    background:#F7F9F8;
+    /*background:rgba(183,200,191,0.6);*/
+    border-top:1px solid #E6E6E6;
+}
+footer > a{
+    width:16vw;
+    height:78%;
+    color:#949695;
+    text-align:center;
+    display:block;
+    text-decoration: none;
+}
+footer > a.router-link-active{
+    color:#5FA30E;
+}
+footer > a .icon i{
+    font-size:2rem;
+}
+footer > a .title{
+    font-size:0.6rem;
+}
+.recommend-unit-price{
+    position: absolute;
+    right: 8px;
+    bottom:0;
+    color:#D24D0C;
+}
+.font-price{
+    color:#D24D0C;
+    font-size:1rem;
+}
 
+@media all and (max-width:400px){
+    html{
+        font-size:10px;
+    }
+}
+@media all and (max-width:255px){
+    html{
+        font-size:8px;
+    }
+}
+@media all and (min-width:400px){
+    html{
+        font-size: 16px;
+    }
+}
+@media all and (min-width:662px){
+    main .menu > div i {
+        font-size:2.8rem;
+    }
+}
+.chat-container{
+    width:100%;
+    height:auto;
+}
+.near-users{
+    width:100%;
+    height:auto;
+}
+.chat-container .title{
+    width:100%;
+    height: 3.5rem;
+    border-bottom:#d2d2d2 solid 1px;
+    position:fixed;
+    text-align:center;
+    border-top:1px solid transparent;
+    background-color:#fff;
+    z-index: 1;
+}
+.chat-container .title .inner{
+    font-size:1.8rem;
+    line-height: 3.5rem;
+}
+.chat-container .plus{
+    width: 3.5rem;
+    height: 3.5rem;
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto 0;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor:pointer;
+    line-height: 1;
+}
+.chat-container .user{
+    width:100%;
+    height:6rem;
+    border-bottom:#d2d2d2 solid 1px;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+}
+.chat-container .user .icon{
+    width:18%;
+    height:80%;
+}
+.chat-container .user .icon img{
+    width:100%;
+    height:100%;
+}
+.chat-container .user .record-container{
+    width:75%;
+    height:80%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+.chat-container .record-container .user-nick-name{
+    margin:0;
+    position:relative;
+    font-size:1.6rem;
+}
+.chat-container .user-nick-name .record-date{
+    right: 0;
+    position: absolute;
+    font-size: 1.4rem;
+}
+.chat-container .user .near-record{
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.content-panel{
+    width:100%;
+    height:auto;
+    padding:4.5rem 0 6rem 0;
+}
+
+.chating.content-panel{
+    padding-bottom:3rem;
+    background-color: #e5e5e5;
+}
+
+.records-panel{
+    width:100%;
+    height:80%;
+    background-color:#e5e5e5;
+}
+.chating-input{
+    width:100%;
+    height:3rem;
+    background:#fff;
+    position:fixed;
+    bottom:0;
+    text-align:center;
+}
+.chating-input input[type=text]{
+    width:17rem;
+    height:90%;
+    border:none;
+    border-bottom:1px solid #555;
+}
+.chating-input input[type=button]{
+    width:4rem;
+    height:90%;
+}
+.chating-input input:focus{
+    outline:none;
+}
+.record-wrapper{
+    width:100%;
+    height:auto;
+    display:flex;
+    margin-bottom:1rem;
+}
+.record-wrapper > div{
+    margin-left:1rem;
+}
+.record-wrapper .user{
+    width:3rem;
+    height:3rem;
+}
+.record-wrapper .user img{
+    width:100%;
+    height:auto
+}
+.record-wrapper .chat-content{
+    width:9rem;
+    height:auto;
+    background-color:#fff;
+    padding:1rem;
+    border-radius:0.2rem;
+}
+.record-wrapper.sender{
+    justify-content: flex-end;
+}
+.record-wrapper.sender .chat-content{
+    background-color:#11a971;
+    color:#fff;
+}
+.record-wrapper.sender > div:nth-child(1){
+    order:1;
+}
+.record-wrapper.sender > div:nth-child(2){
+    order:0;
+}
